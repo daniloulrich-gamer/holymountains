@@ -24,6 +24,8 @@
 
     </header>
 
+    <br>
+
     <main>
 
         <section>
@@ -98,9 +100,7 @@
                 <div class="grid-itemdois">
                     <p>
                     <article>
-
                         <h3>Dados: RAPIDS</h3>
-
                         <ul>
                             <li><strong>cuDF:</strong> DataFrame em GPU com API próxima à do pandas (joins, filtros,
                                 agregações,
@@ -130,7 +130,6 @@
                     <p>
                     <article>
                         <h3>Otimização de portfólio: cuOpt</h3>
-
                         <p class="Anderson">Markowitz usa a variância como medida de risco. Ela é simétrica e lida mal
                             com caudas
                             pesadas. A gestão institucional migrou para o CVaR (Expected Shortfall), a perda média
@@ -140,7 +139,6 @@
                             ativos e dezenas de milhares de cenários, ele passa de 10 milhões de entradas não nulas. Em
                             CPU isso
                             costuma virar processamento noturno.</p>
-
                         <p class="Anderson">O cuOpt resolve LP e MILP em GPU, principalmente com PDLP (um método de
                             gradiente
                             primal-dual, fácil de paralelizar). Também pode rodar barreira e simplex dual em paralelo e
@@ -148,7 +146,6 @@
                             o primeiro que convergir. Acoplado ao cuML, a NVIDIA reporta até 160x frente a solvers de
                             CPU open
                             source, com soluções em menos de 1 segundo. Isso viabiliza:</p>
-
                         <ul>
                             <li><strong>Rebalanceamento por desvio:</strong> dispara quando os pesos se afastam do alvo,
                                 em vez de
@@ -169,7 +166,6 @@
                     <p>
                     <article>
                         <h3>Inferência de IA e baixa latência</h3>
-
                         <ul>
                             <li><strong>TensorRT:</strong> converte modelos PyTorch/TensorFlow em engines otimizados
                                 para a GPU
@@ -200,7 +196,6 @@
                     <p>
                     <article>
                         <h3>Hardware e capacitação</h3>
-
                         <ul>
                             <li><strong>Superchips Grace Hopper/Grace Blackwell:</strong> CPU Arm e GPU ligadas por
                                 NVLink-C2C
@@ -217,13 +212,12 @@
             </div>
         </section>
 
-                <section>
+        <section>
             <div class="grid-containerdois">
                 <div class="grid-itemdois">
                     <p>
                     <article>
                         <h3>Pipeline integrado</h3>
-
                         <ol>
                             <li><strong>Ingestão e features:</strong> cuDF + Numba geram indicadores e variáveis em
                                 tempo real.
@@ -237,28 +231,9 @@
                                 microssegundos para os
                                 algoritmos de execução.</li>
                         </ol>
-
                         <p class="Anderson">O ganho prático é sair do risco em lote pós-mercado para decisão
                             intradiária, com
                             gestão dinâmica do risco de cauda.</p>
-                    </article>
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section>
-            <div class="grid-containerdois">
-                <div class="grid-itemdois">
-                    <p>
-                    <article>
-                        <h3>Sobre os números de desempenho</h3>
-
-                        <p class="Anderson">Os ganhos citados (8x, 100x, 160x e 2x a 5x) são resultados de benchmarks
-                            divulgados
-                            pela NVIDIA. Eles dependem do tamanho do problema e do que foi usado como comparação, então
-                            não valem
-                            como garantia.</p>
                     </article>
                     </p>
                 </div>
